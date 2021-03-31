@@ -1,0 +1,147 @@
+/* Paul Irish reset */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header area */
+.header {
+  background-color: lightgreen;
+  display: flex;
+  align-items: center;
+  height: 75px;
+}
+
+.logo {
+  flex-basis: 350px;
+  min-width: 240px;
+}
+
+.header-navigation {
+  flex-basis: 70%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header-nav-link {
+  margin-right: 25px;
+}
+
+/* Main banner */
+.main-banner {
+  background-color: lightsalmon;
+  background: url(./images/book-banner2.png);
+  background-size: cover;
+  height: 300px;
+  color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.banner-button {
+  padding: 10px;
+  border: none;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.banner-button:hover {
+  background-color: white;
+  box-shadow: 4px 4px 10px rgba(255, 255, 255, 0.5);
+}
+
+.banner-button:active {
+  background-color: darkgrey;
+  color: white;
+  box-shadow: 3px 3px 8px rgba(125, 125, 125, 0.4);
+}
+
+/* Product sections */
+.product-section {
+  background-color: lightgoldenrodyellow;
+  padding: 25px 0;
+}
+
+.product-container {
+  width: 150px;
+  height: 250px;
+  border: 1px solid black;
+}
+
+.product-row {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* About us */
+.about-us {
+  background-color: lightblue;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "heading heading"
+    "text1 img1"
+    "text2 img2";
+  grid-gap: 20px;
+  padding: 25px 0;
+}
+
+.about-us-heading {
+  grid-area: heading;
+  text-align: center;
+}
+
+.about-us-image-block {
+  height: 100px;
+  width: 80%;
+  display: inline-block;
+  background-color: lightgoldenrodyellow;
+}
+
+.about-us-image-block.img-1 {
+  grid-area: img1;
+}
+
+.about-us-image-block.img-2 {
+  grid-area: img2;
+}
+
+.about-us-text-block {
+  width: 80%;
+  text-align: center;
+}
+
+.about-us-text-block.text-1 {
+  grid-area: text1;
+}
+
+.about-us-text-block.text-2 {
+  grid-area: text2;
+}
+
+/* Footer */
+.footer {
+  background-color: lightgreen;
+  height: 125px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.footer-navigation {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-nav-link {
+  margin: 0 12px;
+}
