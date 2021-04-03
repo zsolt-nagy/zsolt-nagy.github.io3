@@ -1,6 +1,8 @@
 /* Paul Irish reset */
 html {
+  font-size: 16px;
   box-sizing: border-box;
+  font-family: 'Roboto', Arial, sans-serif;
 }
 
 *,
@@ -73,19 +75,39 @@ html {
 
 /* Product sections */
 .product-section {
-  background-color: lightgoldenrodyellow;
   padding: 25px 0;
 }
 
-.product-container {
-  width: 150px;
-  height: 250px;
-  border: 1px solid black;
+.product-row-title {
+  margin-left: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow:rgba(0, 0, 0, 0.5);
 }
 
 .product-row {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.product-container {
+  width: 150px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.book-image {
+  width: 100%;
+  min-width: 150px;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+.book-link {
+  margin-top: 8px;
 }
 
 /* About us */
@@ -151,4 +173,20 @@ html {
 
 .footer-nav-link {
   margin: 0 12px;
+}
+
+.d-none {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .d-md-block {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .d-lg-block {
+    display: block;
+  }
 }
