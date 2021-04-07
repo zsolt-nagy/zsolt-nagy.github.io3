@@ -13,9 +13,60 @@ html {
   padding: 0;
 }
 
+label {
+  display: flex; 
+  flex-direction: column;
+  font-size: 20px;
+  line-height: 24px;  
+  margin: 10px;
+  text-align: left;
+}
+
+/* Components */ 
+input, textarea {
+  width: 400px;
+  font-size: 20px;
+  line-height: 24px;
+  padding: 8px;
+  background: none;
+  border: none;
+  border: 2px solid silver;
+  box-shadow: 3px 3px 8px silver;
+  color: silver;
+  margin-top: 10px;
+}
+
+textarea {
+  border: 2px solid silver;
+}
+
+.action-button {
+  margin-top: 80px;
+  margin-right: 25%;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  font-variant: small-caps;
+  letter-spacing: 2px;
+  background-color: darkgoldenrod;
+}
+
+.action-button:hover {
+  background-color: goldenrod;
+  box-shadow: 4px 4px 10px rgba(184, 134, 11, 0.5);
+}
+
+.action-button:active {
+  background-color: gold;
+  box-shadow: 4px 4px 10px rgba(241, 186, 47, 0.75);
+}
+
 /* Header area */
 .header {
-  background-color: lightgreen;
+  background-color: #131921;
+  color: goldenrod;
   display: flex;
   align-items: center;
   height: 75px;
@@ -24,6 +75,7 @@ html {
 .logo {
   flex-basis: 350px;
   min-width: 240px;
+  margin-left: 45px;
 }
 
 .header-navigation {
@@ -32,45 +84,49 @@ html {
   justify-content: flex-end;
 }
 
-.header-nav-link {
+.header-nav-link, 
+.header-nav-link:visited,
+.header-nav-link:active,
+.header-nav-link:focus {
   margin-right: 25px;
+  color: whitesmoke;
+  text-decoration: none;
+  font-size: 18px;
 }
 
 /* Main banner */
 .main-banner {
   background-color: lightsalmon;
-  background: url(./images/book-banner2.png);
+  background: url(./images/book-banner3.png);
   background-size: cover;
+  background-position: left bottom;
   height: 300px;
   color: whitesmoke;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  letter-spacing: 1px;
 }
 
-.banner-tagline {
-  margin-top: 40px;
-  margin-left: 40px; 
+.banner-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 300px;
+  margin: 0 40px;
+  height: 100%;
 }
 
-.banner-button {
-  margin-top: calc((300px - 35px)/2);
-  margin-right: 25%;
-  padding: 10px;
-  border: none;
-  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
-  cursor: pointer;
+.banner-p {
+  padding: 0 45px;
+  text-align: center;
 }
 
-.banner-button:hover {
-  background-color: white;
-  box-shadow: 4px 4px 10px rgba(255, 255, 255, 0.5);
-}
-
-.banner-button:active {
-  background-color: darkgrey;
-  color: white;
-  box-shadow: 3px 3px 8px rgba(125, 125, 125, 0.4);
+.banner-discount {
+  color: gold;
+  font-variant: small-caps;
+  font-size: 24px;
 }
 
 /* Product sections */
@@ -156,9 +212,30 @@ html {
   grid-area: text2;
 }
 
+/* Contact form */
+.contact-body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: black;
+  color: silver;  
+}
+
+.contact-main-area {
+  text-align: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /* Footer */
 .footer {
-  background-color: lightgreen;
+  background-color: black;
+  color: #aaaaaa;
   height: 125px;
   display: flex;
   flex-direction: column;
@@ -171,8 +248,12 @@ html {
   justify-content: center;
 }
 
-.footer-nav-link {
+.footer-nav-link, 
+.footer-nav-link:visited,
+.footer-nav-link:active,
+.footer-nav-link:focus {
   margin: 0 12px;
+  color: #aaaaaa;
 }
 
 .d-none {

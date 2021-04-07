@@ -7,15 +7,60 @@
     <title>Static Template</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <header class="header">Header</header>
+  <body class="contact-body">
+    <header class="header">
+      <h1 class="logo">Magic Bookstore</h1>
+      <nav class="header-navigation">
+        <a class="header-nav-link" href="#">
+          Home
+        </a>
+        <a class="header-nav-link" href="#products">
+          Products
+        </a>
+        <a class="header-nav-link" href="#aboutus">
+          About Us
+        </a>
+        <a class="header-nav-link" href="./contact.html">
+          Contact us
+        </a>
+      </nav>
+    </header>
+    <main class="contact-main-area">
+      <h2>Contact us!</h2>
+      <form action="https://formspree.io/f/mayaybyw" method="POST" class="contact-form">
+        <label>
+          Name:
+          <input type="text" name="name" required />
+        </label>
+        <label>
+          E-Mail:
+          <input type="email" name="email" required />
+        </label>
+        <label>
+          Message: 
+          <textarea name="message" rows="10"></textarea>
+        </label>
+        <button type="submit" class="action-button">SEND</button>
+      </form>
+    </main>
     <footer class="footer">
       <nav class="footer-navigation">
-        <a href="./index.html">Home</a>
-        <a href="./index.html#products">Products</a>
-        <a href="./index.html#aboutus">About Us</a>
-        <a href="./contact.html">Contact us</a>
+        <a class="footer-nav-link" href="#">
+          Home
+        </a>
+        <a class="footer-nav-link" href="#products">
+          Products
+        </a>
+        <a class="footer-nav-link" href="#aboutus">
+          About Us
+        </a>
+        <a class="footer-nav-link" href="./contact.html">
+          Contact us
+        </a>
       </nav>
+      <div class="copyright">
+        Copyright &copy; 2021 Zsolt Nagy
+      </div>
     </footer>
   </body>
 </html>
