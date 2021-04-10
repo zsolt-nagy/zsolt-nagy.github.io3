@@ -5,6 +5,11 @@ html {
   font-family: 'Roboto', Arial, sans-serif;
 }
 
+:root {
+  --secondary-background: #131921;
+  --secondary-color: whitesmoke;
+}
+
 *,
 *:before,
 *:after {
@@ -41,8 +46,6 @@ textarea {
 }
 
 .action-button {
-  margin-top: 80px;
-  margin-right: 25%;
   padding: 12px;
   font-size: 18px;
   border: none;
@@ -65,7 +68,7 @@ textarea {
 
 /* Header area */
 .header {
-  background-color: #131921;
+  background: var(--secondary-background);
   color: goldenrod;
   display: flex;
   align-items: center;
@@ -106,6 +109,11 @@ textarea {
   align-items: flex-start;
   justify-content: space-between;
   letter-spacing: 1px;
+}
+
+.main-banner .action-button {
+  margin-top: 80px;
+  margin-right: 25%;
 }
 
 .banner-text {
@@ -168,7 +176,8 @@ textarea {
 
 /* About us */
 .about-us {
-  background-color: lightblue;
+  background: var(--secondary-background);
+  color: var(--secondary-color);
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
@@ -232,10 +241,20 @@ textarea {
   align-items: center;
 }
 
+.form-buttons {
+  width: 400px;
+  display: flex; 
+  justify-content: flex-start;
+}
+
+.form-buttons .action-button {
+  margin-top: 15px;
+}
+
 /* Footer */
 .footer {
-  background-color: black;
-  color: #aaaaaa;
+  background: var(--secondary-background);
+  color: var(--secondary-color);
   height: 125px;
   display: flex;
   flex-direction: column;
