@@ -10,6 +10,10 @@ html {
   --secondary-color: whitesmoke;
 }
 
+body {
+  min-width: 400px;
+}
+
 *,
 *:before,
 *:after {
@@ -179,11 +183,14 @@ textarea {
   background: var(--secondary-background);
   color: var(--secondary-color);
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
+  justify-items: center;
   grid-template-areas:
-    "heading heading"
-    "text1 img1"
-    "text2 img2";
+  "heading"
+  "text1"
+  "img1"
+  "text2"
+  "img2";
   grid-gap: 20px;
   padding: 25px 0;
 }
@@ -194,18 +201,24 @@ textarea {
 }
 
 .about-us-image-block {
-  height: 100px;
-  width: 80%;
+  width: 360px;
+  height: 240px;
   display: inline-block;
   background-color: lightgoldenrodyellow;
 }
 
 .about-us-image-block.img-1 {
   grid-area: img1;
+  background-image: url(./images/bookstore.png);
+  background-size: cover;
+  background-position: center center; 
 }
 
 .about-us-image-block.img-2 {
   grid-area: img2;
+  background-image: url(./images/sale.png);
+  background-size: cover;
+  background-position: center bottom; 
 }
 
 .about-us-text-block {
@@ -283,10 +296,30 @@ textarea {
   .d-md-block {
     display: block;
   }
+
+  .about-us {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "heading heading"
+      "text1 img1"
+      "text2 img2";
+  } 
+
+  .about-us-image-block.img-1,
+  .about-us-image-block.img-2 {
+    width: 360px;
+    height: 240px;
+  }
 }
 
 @media screen and (min-width: 992px) {
   .d-lg-block {
     display: block;
   }
+
+  .about-us-image-block.img-1,
+  .about-us-image-block.img-2 {
+    width: 420px;
+    height: 280px;
+  }  
 }
